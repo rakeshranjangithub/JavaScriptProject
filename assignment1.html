@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .prt-container{
+            border: 2px solid black;
+            width: 50%;
+            margin: 50px auto;
+        }
+        .container{
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+
+        .btn-container{
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        margin-top: 20px;
+    }
+    .btn-container button{
+        margin: 5px;
+    }
+    </style>
+    
+</head>
+<body>
+     <div class="prt-container">
+        <div class="container">
+            <button id="btn-start">START</button>
+            <button id="btn-end">STOP</button>
+        </div>
+
+        <div class="btn-container">
+
+        </div>
+     </div>
+
+    <script>
+        let array = [...new Array(60)].map((elem,index) => index + 1);
+        let  btnTags = document.querySelector('.btn-container');
+        let btnStart = document.getElementById('btn-start');
+        let btnEnd = document.getElementById('btn-end');
+        let button;
+        let boxNo;
+        console.log(array);
+        let createButtons = () => {
+            btnTags.innerHTML = "";
+            array.forEach((btnText) => {
+                console.log("hello")
+                button = document.createElement('button');
+                button.innerText = btnText;
+                button.setAttribute("id",btnText);
+                button.classList.add('btn')
+                btnTags.appendChild(button);
+            })
+        }
+        createButtons()
+        let id = 1;
+        btnStart.addEventListener('click',(event) => {
+            setInterval(() => {
+                if(id === 61) {
+                    createButtons();
+                    id = 1;
+                }
+                document.getElementById(id+"").style.backgroundColor = `rgb(${Math.trunc(Math.random()*255)},${Math.trunc(Math.random()*255)},${Math.trunc(Math.random()*255)})`;
+                // For color
+                // document.getElementById(id+"").style.color = `rgb(${Math.trunc(Math.random()*255)},${Math.trunc(Math.random()*255)},${Math.trunc(Math.random()*255)})`;
+                
+                id++;
+            },1000)
+        })
+
+
+        // let intervalId = setInterval(() =>{
+        //        array.forEach(element =>{
+        //        button.innerText = element
+        //        console.log('hi')
+        //        })
+        //     },1000)
+    </script>
+</body>
+</html>
