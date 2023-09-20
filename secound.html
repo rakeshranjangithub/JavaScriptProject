@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secound project</title>
+    <!-- <link rel="stylesheet" href="secound.css"/> -->
+</head>
+<body>
+ 
+     <!-- <div class="btn">
+        <button onclick="toggleModel()">Show Model</button>
+     </div>
+     <div class=" hidden model ">
+          <div>
+             <h1>Welcome to JSpiders</h1>
+             <button onclick="hideModel()">X</button>
+          </div>
+          <div>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eveniet asperiores maiores molestias. Neque dolore nisi ea, ut hic possimus? Nihil velit ipsam quasi, consequuntur accusamus earum rerum labore minus voluptatibus nobis a recusandae quam, aut minima inventore reprehenderit eaque id facere omnis mollitia unde ducimus? Eligendi atque similique quam?</p>
+           </div>
+     </div> -->
+
+     <!-- <script>
+      const model = document.querySelector('.model');
+      function toggleModel(){
+         model.classList.remove('hidden');  //toggle
+      }
+
+      function hideModel(){
+         model.classList.add('hidden');
+      }
+      </script> -->
+      <div class="btn">
+      <button id="btn">Show Model</button>
+     </div>
+     <div class=" hidden model ">
+          <div>
+             <h1>Welcome to JSpiders</h1>
+             <button id="close-btn">X</button>
+          </div>
+          <div>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eveniet asperiores maiores molestias. Neque dolore nisi ea, ut hic possimus? Nihil velit ipsam quasi, consequuntur accusamus earum rerum labore minus voluptatibus nobis a recusandae quam, aut minima inventore reprehenderit eaque id facere omnis mollitia unde ducimus? Eligendi atque similique quam?</p>
+           </div>
+
+      <script>
+         const btn = document.getElementById("btn");
+         const modal = document.querySelector(".model");
+         btn.addEventListener('click' , () => {
+            if(modal.classList.contains("hidden")){
+               btn.innerText = "Hide modal"
+            }
+            else{
+               btn.innerText = "show Modal"
+            }
+            modal.classList.toggle('hidden');
+         })
+
+         document.getElementById("close-btn").addEventListener('click' ,() => {
+            modal.classList.add('hidden');
+            btn.innerText = "show Modal"
+         })
+
+         window.addEventListener('keydown',(event) => {
+            if(event.keyCode === 27){
+               modal.classList.add('hidden');
+               btn.innerText = "Show Modal"
+            }
+         })
+      </script>
+ 
+</body>
+</html>

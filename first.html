@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counting program</title>
+    <!-- <link rel="stylesheet" href="first.css"/> -->
+</head>
+<body>
+    <!-- <div>
+    <div id="btn-container">
+      
+        <button onclick="decByTwo()">- 2</button>
+        <button onclick="decByOne()">- 1</button>
+        <h3 id="result">0</h3>
+        <button onclick="incByOne()">+ 1</button>
+        <button onclick="incByTwo()">+ 2</button>
+      
+   </div>
+    <div class="value">
+        <button>-</button>
+        <input type="number" placeholder="Enter value"/>
+        <button>+</button>
+    </div>
+    </div>
+    <script>
+       let resultTag = document.getElementById("result");
+       function incByOne(){
+        resultTag.innerText= Number(resultTag.innerText) + 1;
+       }
+       function incByTwo(){
+        resultTag.innerText= Number(resultTag.innerText) +  2;
+       }
+       function decByOne(){
+        resultTag.innerText= Number(resultTag.innerText) - 1;
+       }
+       function decByTwo(){
+        resultTag.innerText= Number(resultTag.innerText) -2;
+       }
+    </script>
+  -->
+<div>
+    <div id="btn-container">
+      
+        <button onclick="onClickButton(-2)">- 2</button>
+        <button onclick="onClickButton(-1)">- 1</button>
+        <h3 id="result">0</h3>
+        <button onclick="onClickButton(1)">+ 1</button>
+        <button onclick="onClickButton(2)">+ 2</button>
+      
+   </div>
+    <div class="value">
+        <button onclick="onIncDynamic(-1)" >-</button>
+        <input id="uservalue" type="number" placeholder="Enter value"/>
+        <button onclick="onIncDynamic(1)">+</button>
+    </div>
+</div>   
+    <script>
+       const resultTag = document.getElementById("result");
+
+       function onClickButton(value){
+        resultTag.innerText= Number(resultTag.innerText) + value;
+       }
+       
+       const inputTag = document.getElementById("uservalue");
+
+       function onIncDynamic(v){
+        resultTag.innerText = (Number(inputTag.value) * v) + Number(resultTag.innerText);
+       }
+
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Global(){
+        let name=prompt("Enter your name");
+        let size=+ prompt("Enter Size between 5 to 7");
+        let char=prompt("Enter Any Special Charecter");
+        // if("x"===name) PatternX(size);
+        for(let i = 0 ; i <= name.length ; i++) {
+            switch(name[i]) {
+                case 'a' :
+                    PatternA(size);
+                    break;
+
+                case 'b' :
+                    PatternB(size);
+                    break;
+
+                case 'c' :
+                    PatternC(size);
+                    break;
+
+                case 'd' :
+                    PatternD(size);
+                    break;
+
+                case 'e' :
+                    PatternE(size);
+                    break;
+
+                case 'f' :
+                    PatternF(size);
+                    break;
+
+                case 'g' :
+                    PatternG(size);
+                    break;
+
+                case 'h' :
+                    PatternH(size);
+                    break;
+
+                case 'i' :
+                    PatternI(size);
+                    break;
+
+                case 'j' :
+                    PatternJ(size);
+                    break;
+
+                case 'k' :
+                    PatternK(size);
+                    break;
+
+                case 'l' :
+                    PatternL(size);
+                    break;
+
+                case 'm' :
+                    PatternM(size);
+                    break;
+
+                case 'n' :
+                    PatternN(size);
+                    break;
+
+                case 'o' :
+                    PatternO(size);
+                    break;
+
+                case 'p' :
+                    PatternP(size);
+                    break;
+
+                case 'q' :
+                    PatternQ(size);
+                    break;
+
+                case 'r' :
+                    PatternR(size);
+                    break;
+
+                case 's' :
+                    PatternS(size);
+                    break;
+
+                case 't' :
+                    PatternT(size);
+                    break;
+
+                case 'u' :
+                    PatternU(size);
+                    break;
+
+                case 'v' :
+                    PatternV(size);
+                    break;
+
+                case 'w' :
+                    PatternW(size);
+                    break;
+
+                case 'x' :
+                    PatternX(size);
+                    break;
+
+                case 'y' :
+                    PatternY(size);
+                    break;
+
+                case 'z' :
+                    PatternZ(size);
+                    break;
+                 
+                default :
+            }
+            console.log("     ");
+
+        }
+        function PatternX(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===col || col===n-row+1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        // PatternX(size);
+        function PatternA(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===Math.trunc(n/2)+1 || col===1 || col===n) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternB(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===Math.trunc(n/2)+1 || row===n || col===1 || col===n) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternC(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===n || col===1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternD(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===n || col===2 || col===n) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternE(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===Math.trunc(n/2+1) || row===n || col===1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternF(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===Math.trunc(n/2+1) || col===1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternG(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || col===1 || (row===n && col===2) || (row===n && col===3) || (col===3 && row!==2) || (row===3 && col!==2) || (col===5 && row!==2)) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternH(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===Math.trunc(n/2) || col===1 || col===n) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternI(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || col===Math.trunc(n/2) ) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternJ(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || col===Math.trunc((n+2)/2)  ||(col===1 && row!==2)|| row===n && col===2) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternK(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n-2; col++){
+                pattern += (col===1 || (row===2 && col===2) || (row===1 && col===3)|| (row===4 && col===2) || (row===5 && col===3)) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternL(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===n || col===1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternM(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (col===1) || (col===n) || (((row===Math.trunc(n/2))&&(col===Math.trunc(n/2)+2))) || ((row===col)&&(row<=Math.trunc(n/2)+1)) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternN(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (col===1 || col===n || col===row) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternO(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===n || col===1 || col===n) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternP(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (col===1) || ((row===1)&&(col<n)) ||((row===Math.trunc(n/2)+1)&&(col<n))||((col===n)&&row<Math.trunc(n/2)+1)&&(row>1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternQ(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===n || col===1 || col===n) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternT(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n+2; col++){
+                pattern += (row===1 || col===Math.trunc(n+2)/2) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternU(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===n || col===1 || col===n) ? char : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        function PatternZ(n){
+           let pattern="";
+           for(let row=1; row<=n; row++){
+            for(let col=1; col<=n; col++){
+                pattern += (row===1 || row===n || col===n-row+1) ? `${char}` : " ";
+            }
+            pattern +="\n";
+           }
+           console.log(pattern);
+        }
+        
+    }
+    Global();
+    </script>
+</head>
+<body>
+    Project 1-Print the Name
+</body>
+</html>
