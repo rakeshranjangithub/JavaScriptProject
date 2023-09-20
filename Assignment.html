@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        static batch = "Marathahalli Jspiders";
+        static num = 1;
+        constructor(name, course, TotalFee, PaidFee, date, month, year) {
+          this.name = name;
+          this.course = course;
+          this.id = Student.num;
+          this.TotalFee = TotalFee;
+          this.PaidFee = PaidFee;
+          this.dob = new Age(date, month, year);
+          Student.num = Student.num + 1;
+        }
+        remainingFee() {
+          return this.TotalFee - this.PaidFee;
+        }
+      }
+      class Age {
+        constructor(day, month, year) {
+          this.day = day;
+          this.month = month;
+          this.year = year;
+        }
+        getAge() {
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      const date = new Date();
+
+      let std1 = new Student("Santosh", "Java", 50000, 49000, 8, 5, 2000);
+      console.log(std1);
+      console.log(Student.batch);
+      console.log(std1.remainingFee());
+
+      let age1 = new Age(20, 1, 2000, date);
+      console.log(age1);
+      console.log(age1.getAge());
+    </script>
+  </body>
+</html>

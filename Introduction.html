@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Student{
+            static batch = "Marathahalli Jspiders";
+            static num = 1;
+            constructor(name,course,TotalFee,PaidFee){
+            this.name = name;
+            this.course = course;
+            this.id = Student.num;
+            this.TotalFee = TotalFee;
+            this.PaidFee = PaidFee;
+            Student.num = Student.num + 1;
+        }
+        getName() {
+            return this.name;
+        }
+
+        }
+
+        let std1 = new Student("Tejas","mern",50000,45000);
+
+        let std2 = new Student("Rakesh","java",50000,40000);
+        console.log(std1);
+        console.log(std2);
+
+
+        // class Student{
+        //     static name = "Tejas";
+        //     static age = 20;
+        //     gender = "male";
+        //     course = "MERN";
+
+        // }
+        // let std1 = new Student();
+        //    console.log(Student.name);
+        //    console.log(std1.course);
+    </script>
+</body>
+</html>

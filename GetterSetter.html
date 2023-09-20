@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript class</title>
+</head>
+<body>
+    <script>
+       class User {
+         constructor(name,username,password) {
+            this.name = name;
+            this.#username = username;
+            this.#password = password;
+
+         }
+         usernameSetter(user) {
+            this.#username = user;
+         }
+         usernameGetter() {
+            return this.#username;
+         }
+         passwordSetter(pass) {
+            this.#password = pass;
+         }
+         getVerify(pass) {
+            return this.#password === pass;
+         }
+       }
+       
+    const user = new User("Tejas","tejas4321","789654");
+    console.log(user.name);
+    console.log(user.username);
+    console.log(user.usernameGetter());
+    user.usernameSetter("Tejas123");
+    console.log(user.usernameGetter());
+    user.passwordSetter("8963");
+
+
+    console.log(user.getVerify("7896"));
+    
+    </script>
