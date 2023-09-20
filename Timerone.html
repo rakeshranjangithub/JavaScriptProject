@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counting{
+            border: 2px solid red;
+            padding: 5px;
+            margin: 50px;
+            width: 300px;
+            text-align: center;
+            margin: 20px auto;
+            background-color: aquamarine;
+            color: red;
+        }
+        .start ,.end{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            display: inline;
+            
+        }
+        #one{
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col  counting"><span id="hour">00</span> : <span id="minutes">00</span> : <span id="secound">00</span></div>
+        </div>
+        <div id="one" class="row ">
+            <div class="col start"><button>Start</button></div>
+            <div class="col end"><button>End</button></div>
+        </div>
+    </div>
+    <script>
+     let start = document.querySelector('.start');
+     let end = document.querySelector('.end');
+     let secound = document.getElementById('secound');
+     let minutes = document.getElementById('minutes');
+     let hour = document.getElementById('hour');
+     start.addEventListener('click', () => {
+
+        setInterval(s1,1000)
+     })
+
+
+     let s1 = ()=>{
+
+        secound.innerText = ++ secound.innerText
+        
+     };
+    </script>
+</body>
+</html>

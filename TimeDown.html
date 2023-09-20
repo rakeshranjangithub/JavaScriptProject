@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Down</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      #timer-container {
+        border: 2px solid black;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin: 15px;
+        padding: 10px 12px;
+        transition: all 0.2s linear;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="timer-container">
+      <h1 id="timer">00 : 00 :00</h1>
+      <div>
+        <button id="btn-2">2 M</button>
+        <button id="btn-4">4 M</button>
+        <button id="btn-5">5 M</button>
+        <button id="btn-10">10 M</button>
+      </div>
+      <div>
+        <button id="btn-start">START</button>
+        <button id="btn-stop">STOP</button>
+      </div>
+    </div>
+
+    <script>
+      let total;
+      let secs;
+      let mins;
+      let hrs;
+      let timerId = null;
+      const timerTag = document.getElementById("timer");
+
+      let two = document.getElementById("btn-2");
+      two.addEventListener("click", () => {
+        total = 120;
+      });
+
+      let four = document.getElementById("btn-4");
+      four.addEventListener("click", () => {
+        total = 240;
+      });
+
+      let five = document.getElementById("btn-5");
+      five.addEventListener("click", () => {
+        total = 300;
+      });
+
+      let ten = document.getElementById("btn-10");
+      ten.addEventListener("click", () => {
+        total = 600;
+      });
+      document.getElementById("btn-start").addEventListener("click", () => {
+        if (timerId === null) {
+          timerId = setInterval(() => {
+            hrs = Math.floor(total / (60 * 60));
+            mins = Math.floor(total % 60);
+
+            console.log(hrs, mins, secs);
+
+            timerTag.innerText = timeFormat(hrs, mins, secs);
+
+            if (total < 0) {
+              clearInterval(timerId);
+              window.style.color = red;
+            }
+          }, 1000);
+        }
+      });
+      let stop = document.getElementById("btn-stop");
+      stop.addEventListener("click", () => {
+        clearInterval(timerId);
+        timerId = null;
+      });
+      function timeFormat(h, m, s) {
+        return `${h < 9 ? "0" + h : h} : ${m < 9 ? "0" + m : m} : ${
+          s < 9 ? "0" + s : s
+        }`;
+      }
+    </script>
+  </body>
+</html>
